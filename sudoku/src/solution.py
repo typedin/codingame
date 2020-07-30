@@ -9,7 +9,6 @@ class solution():
 
     def __lines(self):
         result = []
-        print(self.sudoku.splitlines())
         for line in self.sudoku.splitlines():
             result.append([
                 int(number)
@@ -38,15 +37,6 @@ class solution():
                         self.lines[j + 2][i:i+3]
                     )
         return result
-
-    def get_cell(self, aCellIndex):
-        return self.cells[aCellIndex]
-
-    def get_row(self, aRowIndex):
-        return self.lines[aRowIndex]
-
-    def get_column(self, aColumnIndex):
-        return self.columns[aColumnIndex]
 
     def is_valid(self, anArrayOfNumbers):
         return len(set(anArrayOfNumbers)) == self.sudoku_size
