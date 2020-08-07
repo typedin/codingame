@@ -1,6 +1,6 @@
 class Player():
     def __init__(self, anId, aSign):
-        self.id = anId
+        self.id = int(anId)
         self.sign = aSign
         self.opponents = []
 
