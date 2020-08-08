@@ -1,6 +1,6 @@
 import src
 import unittest
-from src.draw import Draw
+from src.signs import Draw
 from src.player import Player
 from tests.commonAssertion import CommonAssertion
 
@@ -9,7 +9,7 @@ class TestDraw(unittest.TestCase, CommonAssertion):
 
     @classmethod
     def setUpClass(cls):
-        cls.sut = getattr(src.draw, "Draw")
+        cls.sut = getattr(src.signs, "Draw")
 
     def test_both_player_must_have_the_same_sign(self):
         playerA = Player(1, "S")

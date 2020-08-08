@@ -1,6 +1,6 @@
 import src
 import unittest
-from src.spock import Spock
+from src.signs import Spock
 from src.player import Player
 from tests.commonAssertion import CommonAssertion
 
@@ -9,7 +9,7 @@ class TestSpock(unittest.TestCase, CommonAssertion):
 
     @classmethod
     def setUpClass(cls):
-        cls.sut = getattr(src.spock, "Spock")
+        cls.sut = getattr(src.signs, "Spock")
         cls.playerA = Player(1, "S")
 
     def test_first_player_must_be_spock(self):

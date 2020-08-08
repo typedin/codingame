@@ -52,3 +52,63 @@ class Draw(Sign):
             return self.playerB
         else:
             return self.playerA
+
+
+class Lizard(Sign):
+
+    def identifier(self):
+        return "L"
+
+    def stronger_than(self):
+        return ["P", "S"]
+
+    def weaker_than(self):
+        return ["R", "C"]
+
+
+class Paper(Sign):
+
+    def identifier(self):
+        return "P"
+
+    def stronger_than(self):
+        return ["R", "S"]
+
+    def weaker_than(self):
+        return ["C", "L"]
+
+
+class Rock(Sign):
+
+    def identifier(self):
+        return "R"
+
+    def stronger_than(self):
+        return ["L", "C"]
+
+    def weaker_than(self):
+        return ["P", "S"]
+
+
+class Scissors(Sign):
+
+    def identifier(self):
+        return "C"
+
+    def stronger_than(self):
+        return ["P", "L"]
+
+    def weaker_than(self):
+        return ["R", "S"]
+
+
+class Spock(Sign):
+
+    def identifier(self):
+        return "S"
+
+    def stronger_than(self):
+        return ["C", "R"]
+
+    def weaker_than(self):
+        return ["P", "L"]

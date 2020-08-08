@@ -1,6 +1,6 @@
 import src
 import unittest
-from src.paper import Paper
+from src.signs import Paper
 from src.player import Player
 from tests.commonAssertion import CommonAssertion
 
@@ -9,7 +9,7 @@ class TestPaper(unittest.TestCase, CommonAssertion):
 
     @classmethod
     def setUpClass(cls):
-        cls.sut = getattr(src.paper, "Paper")
+        cls.sut = getattr(src.signs, "Paper")
         cls.playerA = Player(1, "P")
 
     def test_first_player_must_be_paper(self):

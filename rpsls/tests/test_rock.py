@@ -1,6 +1,6 @@
 import src
 import unittest
-from src.rock import Rock
+from src.signs import Rock
 from src.player import Player
 from tests.commonAssertion import CommonAssertion
 
@@ -9,7 +9,7 @@ class TestRock(unittest.TestCase, CommonAssertion):
 
     @classmethod
     def setUpClass(cls):
-        cls.sut = getattr(src.rock, "Rock")
+        cls.sut = getattr(src.signs, "Rock")
         cls.playerA = Player(1, "R")
 
     def test_first_player_must_be_rock(self):

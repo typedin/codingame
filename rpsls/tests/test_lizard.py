@@ -1,6 +1,6 @@
 import src
 import unittest
-from src.lizard import Lizard
+from src.signs import Lizard
 from src.player import Player
 from tests.commonAssertion import CommonAssertion
 
@@ -9,7 +9,7 @@ class TestLizard(unittest.TestCase, CommonAssertion):
 
     @classmethod
     def setUpClass(cls):
-        cls.sut = getattr(src.lizard, "Lizard")
+        cls.sut = getattr(src.signs, "Lizard")
         cls.playerA = Player(1, "L")
 
     def test_first_player_must_be_lizard(self):

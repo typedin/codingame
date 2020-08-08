@@ -1,7 +1,7 @@
 import src
 import unittest
 from src.player import Player
-from src.scissors import Scissors
+from src.signs import Scissors
 from tests.commonAssertion import CommonAssertion
 
 
@@ -9,7 +9,7 @@ class TestScissors(unittest.TestCase, CommonAssertion):
 
     @classmethod
     def setUpClass(cls):
-        cls.sut = getattr(src.scissors, "Scissors")
+        cls.sut = getattr(src.signs, "Scissors")
         cls.playerA = Player(1, "C")
 
     def test_first_player_must_be_scissors(self):
