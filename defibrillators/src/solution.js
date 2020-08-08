@@ -3,7 +3,7 @@ import Algorithm from "./algorithm.js"
 import StringConvert from "./StringConverter.js"
 import Defibrilator from "./defibrilator.js"
 
-export default class Factory {
+export default class Solution {
   
   #user
   #formator
