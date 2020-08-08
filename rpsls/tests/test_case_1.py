@@ -11,5 +11,5 @@ class TestSolution(unittest.TestCase):
         sut.tournament()
 
         self.assertEqual(1, len(sut.opponents))
-        self.assertEqual(2, sut.getWinner().id)
-        self.assertEqual([6, 5, 1], sut.getWinner().opponents)
+        self.assertEqual("2", sut.getWinner().idToString())
+        self.assertEqual(["6", "5", "1"], sut.getWinner().opponentsToString())

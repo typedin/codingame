@@ -7,5 +7,8 @@ class Player():
     def addOpponent(self, opponent_id):
         self.opponents.append(opponent_id)
 
-    def get_opponents(self):
-        return self.opponents
+    def idToString(self):
+        return str(self.id)
+
+    def opponentsToString(self):
+        return [str(opponent) for opponent in self.opponents]
