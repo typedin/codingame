@@ -1,10 +1,10 @@
 from src.draw import Draw
-from src.spock import Spock
 from src.lizard import Lizard
 from src.paper import Paper
+from src.player import Player
 from src.rock import Rock
 from src.scissors import Scissors
-from src.player import Player
+from src.spock import Spock
 
 
 class solution():
@@ -20,13 +20,15 @@ class solution():
             self.winner = self.opponents[0]
             return
 
-        new_opponents = []
-        for i in range(len(self.opponents)):
-            if i % 2 == 0:
-                new_opponents.append(
-                    self.fight(self.opponents[i], self.opponents[i + 1])
+        round = []
+        for i in range(0, len(self.opponents), 2):
+            round.append(
+                self.fight(
+                    self.opponents[i],
+                    self.opponents[i + 1]
                 )
-        self.opponents = new_opponents
+            )
+        self.opponents = round
         self.tournament()
 
     def getWinner(self):
