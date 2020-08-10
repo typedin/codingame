@@ -7,7 +7,7 @@ def test_impossible_scores():
     assert solution(4) == ["0 0 0"]
 
 
-def test_one_ways():
+def test_one_way():
     assert solution(3) == ["0 0 1"]
     assert solution(5) == ["1 0 0"]
     assert solution(6) == ["0 0 2"]
@@ -18,6 +18,7 @@ def test_one_ways():
 
 
 def test_two_ways():
+    assert solution(10) == ["1 1 1", "2 0 0"]
     assert solution(12) == ["0 0 4", "2 1 0"]
     assert solution(13) == ["1 1 2", "2 0 1"]
     assert solution(14) == ["1 0 3", "2 2 0"]
