@@ -19,4 +19,5 @@ def test_D():
 
 
 def test_E():
-    assert solution(readings4) == "A1 B3 C0 D5 E2 F7 G4 H9 I6 J8"
+    expectation = "A1 B3 C0 D5 E2 F7 G4 H9 I6 J8"
+    assert solution(readings4) == expectation
