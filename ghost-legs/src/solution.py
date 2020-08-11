@@ -60,7 +60,7 @@ def solution(readings):
 
     result = []
     for leg in getLegs(lines[0]):
-        for line in lines:
+        for line in getLines(readings):
             if mustGoLeft(line, leg["index"]):
                 leg["index"] = goLeft(line, leg["index"])
                 continue
