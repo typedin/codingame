@@ -1,4 +1,3 @@
-from src.solution import solution
 from src.solution import mustGoRight
 from src.solution import mustGoLeft
 from src.solution import goRight
