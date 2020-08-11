@@ -68,3 +68,6 @@ def test_reads_starting_identifier():
 
 def test_A():
     assert solution(readings1) == "A2 B1 C3"
+
+def test_B():
+    assert solution(readings1) == "A2 B1 C3"
