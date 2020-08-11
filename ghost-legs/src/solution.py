@@ -54,7 +54,7 @@ def getLegs(firstLine):
             })
     return result
 
-def appleSauce(line, leg):
+def formatOutput(line, leg):
     return "{}{}".format(leg["char"], line[leg["index"]])
 
 def solution(readings):
@@ -67,8 +67,7 @@ def solution(readings):
             if mustGoRight(line, leg["index"]):
                 leg["index"] = goRight(line, leg["index"])
                 continue
-            # appleSauce(line, leg)
-        result.append(appleSauce(line, leg))
+        result.append(formatOutput(line, leg))
 
     return " ".join(result)
 
