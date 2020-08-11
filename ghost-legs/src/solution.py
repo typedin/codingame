@@ -60,16 +60,16 @@ def solution(readings):
 
     result = []
     for leg in getLegs(lines[0]):
-        for i in range(len(lines)):
-            if mustGoLeft(lines[i], leg["index"]):
-                leg["index"] = goLeft(lines[i], leg["index"])
+        for i in lines:
+            if mustGoLeft(i, leg["index"]):
+                leg["index"] = goLeft(i, leg["index"])
                 continue
-            if mustGoRight(lines[i], leg["index"]):
-                leg["index"] = goRight(lines[i], leg["index"])
+            if mustGoRight(i, leg["index"]):
+                leg["index"] = goRight(i, leg["index"])
                 continue
         result.append("{}{}".format(
                     leg["char"],
-                    lines[i][leg["index"]]
+                    i[leg["index"]]
                 )
             )
 
