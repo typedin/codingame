@@ -1,5 +1,5 @@
 from src.solution import solution
-from tests.__fixtures__.readings import readings1, readings2, readings3, readings4
+from tests.__fixtures__.readings import readings1, readings2, readings3, readings4, readings5
 
 
 def test_A():
