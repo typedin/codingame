@@ -61,17 +61,16 @@ def solution(readings):
 
     result = []
     for identifier in getIdentifier(lines[0]):
-        identifier["out"] = identifier["in"]
         for i in range(len(lines)):
-            if mustGoLeft(lines[i], identifier["out"]):
-                identifier["out"] = goLeft(lines[i], identifier["out"])
+            if mustGoLeft(lines[i], identifier["in"]):
+                identifier["in"] = goLeft(lines[i], identifier["in"])
                 continue
-            if mustGoRight(lines[i], identifier["out"]):
-                identifier["out"] = goRight(lines[i], identifier["out"])
+            if mustGoRight(lines[i], identifier["in"]):
+                identifier["in"] = goRight(lines[i], identifier["in"])
                 continue
         result.append("{}{}".format(
                     identifier["char"],
-                    lines[i][identifier["out"]]
+                    lines[i][identifier["in"]]
                 )
             )
 
