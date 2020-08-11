@@ -1,13 +1,3 @@
-readings = '''7 7
-A  B  C
-|  |  |
-|--|  |
-|  |--|
-|  |--|
-|  |  |
-1  2  3'''
-
-
 def getLines(readings):
     return readings.splitlines()[1:]
 
