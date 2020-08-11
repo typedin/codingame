@@ -50,7 +50,6 @@ def getIdentifier(firstLine):
         if firstLine[i] != " ":
             result.append({
                 "char": firstLine[i],
-                "index": i,
                 "in": i,
                 "stop": None
             })
