@@ -63,7 +63,6 @@ def solution(readings):
     result = []
     for identifier in getIdentifier(lines[0]):
         identifier["stop"] = identifier["index"]
-        currentIndex = identifier["stop"]
         for i in range(len(lines)):
             if mustGoLeft(lines[i], identifier["stop"]):
                 identifier["stop"] = goLeft(lines[i], identifier["stop"])
@@ -71,7 +70,9 @@ def solution(readings):
             if mustGoRight(lines[i], identifier["stop"]):
                 identifier["stop"] = goRight(lines[i], identifier["stop"])
                 continue
-        result.append("{}{}".format(identifier["char"], lines[i][identifier["stop"]]))
+        result.append("{}{}".format(
+            identifier["char"], lines[i][identifier["stop"]])
+                      )
 
     return " ".join(result)
 
