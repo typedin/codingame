@@ -21,8 +21,8 @@ def mustGoLeft(line, currentIndex):
 
 
 def mustGoRight(line, currentIndex):
-    if currentIndex + 1 == " ":
-        return False
+    # if currentIndex + 1 == " ":
+        # return False
     if currentIndex + 1 == len(line):
         return False
     if line[currentIndex:currentIndex + 2] == "-|":
