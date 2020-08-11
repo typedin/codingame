@@ -80,4 +80,4 @@ def test_A():
     assert solution(readings1) == "A2 B1 C3"
 
 def test_B():
-    assert solution(readings1) == "A2 B1 C3"
+    assert solution(readings2) == "A3 B5 C1 D2 E4"
