@@ -53,15 +53,15 @@ def test_reads_starting_identifier():
     assert getIdentifier(firstLine) == [
         {
             "char": "A",
-            "in": 0,
+            "index": 0,
         },
         {
             "char": "B",
-            "in": 3,
+            "index": 3,
         },
         {
             "char": "C",
-            "in": 6,
+            "index": 6,
         },
     ]
 

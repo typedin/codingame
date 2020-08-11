@@ -50,7 +50,7 @@ def getIdentifier(firstLine):
         if firstLine[i] != " ":
             result.append({
                 "char": firstLine[i],
-                "in": i,
+                "index": i,
             })
     return result
 
@@ -61,15 +61,15 @@ def solution(readings):
     result = []
     for identifier in getIdentifier(lines[0]):
         for i in range(len(lines)):
-            if mustGoLeft(lines[i], identifier["in"]):
-                identifier["in"] = goLeft(lines[i], identifier["in"])
+            if mustGoLeft(lines[i], identifier["index"]):
+                identifier["index"] = goLeft(lines[i], identifier["index"])
                 continue
-            if mustGoRight(lines[i], identifier["in"]):
-                identifier["in"] = goRight(lines[i], identifier["in"])
+            if mustGoRight(lines[i], identifier["index"]):
+                identifier["index"] = goRight(lines[i], identifier["index"])
                 continue
         result.append("{}{}".format(
                     identifier["char"],
-                    lines[i][identifier["in"]]
+                    lines[i][identifier["index"]]
                 )
             )
 
