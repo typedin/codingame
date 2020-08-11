@@ -54,14 +54,17 @@ def test_reads_starting_identifier():
         {
             "char": "A",
             "index": 0,
+            "start": 0
         },
         {
             "char": "B",
             "index": 3,
+            "start": 3
         },
         {
             "char": "C",
             "index": 6,
+            "start": 6
         },
     ]
 
