@@ -4,25 +4,6 @@ from src.solution import goRight
 from src.solution import goLeft
 from src.solution import getLegs
 
-readings1 = '''7 7
-A  B  C
-|  |  |
-|--|  |
-|  |--|
-|  |--|
-|  |  |
-1  2  3'''
-
-readings2 = '''13 8
-A  B  C  D  E
-|  |  |  |  |
-|  |--|  |  |
-|--|  |  |  |
-|  |  |--|  |
-|  |--|  |--|
-|  |  |  |  |
-1  2  3  4  5
-'''
 
 def test_must_go_right():
     line = "|--|  |"
