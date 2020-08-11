@@ -54,17 +54,17 @@ def test_reads_starting_identifier():
         {
             "char": "A",
             "in": 0,
-            "stop": None
+            "out": None
         },
         {
             "char": "B",
             "in": 3,
-            "stop": None
+            "out": None
         },
         {
             "char": "C",
             "in": 6,
-            "stop": None
+            "out": None
         },
     ]
 

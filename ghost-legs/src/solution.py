@@ -51,7 +51,7 @@ def getIdentifier(firstLine):
             result.append({
                 "char": firstLine[i],
                 "in": i,
-                "stop": None
+                "out": None
             })
     return result
 
@@ -61,17 +61,17 @@ def solution(readings):
 
     result = []
     for identifier in getIdentifier(lines[0]):
-        identifier["stop"] = identifier["in"]
+        identifier["out"] = identifier["in"]
         for i in range(len(lines)):
-            if mustGoLeft(lines[i], identifier["stop"]):
-                identifier["stop"] = goLeft(lines[i], identifier["stop"])
+            if mustGoLeft(lines[i], identifier["out"]):
+                identifier["out"] = goLeft(lines[i], identifier["out"])
                 continue
-            if mustGoRight(lines[i], identifier["stop"]):
-                identifier["stop"] = goRight(lines[i], identifier["stop"])
+            if mustGoRight(lines[i], identifier["out"]):
+                identifier["out"] = goRight(lines[i], identifier["out"])
                 continue
         result.append("{}{}".format(
                     identifier["char"],
-                    lines[i][identifier["stop"]]
+                    lines[i][identifier["out"]]
                 )
             )
 
