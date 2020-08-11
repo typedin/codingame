@@ -1,5 +1,5 @@
 from src.solution import solution
-from tests.__fixtures__.readings import readings1, readings2, readings3
+from tests.__fixtures__.readings import readings1, readings2, readings3, readings4
 
 
 def test_A():
@@ -12,6 +12,7 @@ def test_B():
 
 def test_C():
     assert solution(readings3) == "P3 Q7 R8 S5 T6 U2 V4 W1"
+
 
 def test_D():
     assert solution(readings3) == "P3 Q7 R8 S5 T6 U2 V4 W1"
