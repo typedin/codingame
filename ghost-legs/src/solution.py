@@ -54,8 +54,10 @@ def getLegs(firstLine):
             })
     return result
 
+
 def formatOutput(line, leg):
     return "{}{}".format(leg["char"], line[leg["index"]])
+
 
 def solution(readings):
     result = []
@@ -70,6 +72,3 @@ def solution(readings):
         result.append(formatOutput(line, leg))
 
     return " ".join(result)
-
-
-solution(readings)
