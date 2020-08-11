@@ -51,7 +51,6 @@ def getIdentifier(firstLine):
             result.append({
                 "char": firstLine[i],
                 "in": i,
-                "out": None
             })
     return result
 
