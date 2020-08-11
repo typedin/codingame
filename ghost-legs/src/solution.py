@@ -44,7 +44,7 @@ def goLeft(line, currentIndex):
     return result
 
 
-def getIdentifier(firstLine):
+def getLeg(firstLine):
     result = []
     for i in range(len(firstLine)):
         if firstLine[i] != " ":
@@ -59,7 +59,7 @@ def solution(readings):
     lines = getLines(readings)
 
     result = []
-    for identifier in getIdentifier(lines[0]):
+    for identifier in getLeg(lines[0]):
         for i in range(len(lines)):
             if mustGoLeft(lines[i], identifier["index"]):
                 identifier["index"] = goLeft(lines[i], identifier["index"])

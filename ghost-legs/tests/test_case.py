@@ -3,7 +3,7 @@ from src.solution import mustGoRight
 from src.solution import mustGoLeft
 from src.solution import goRight
 from src.solution import goLeft
-from src.solution import getIdentifier
+from src.solution import getLeg
 
 readings1 = '''7 7
 A  B  C
@@ -50,7 +50,7 @@ def test_go_left_as_long_as_you_can():
 
 def test_reads_starting_identifier():
     firstLine = "A  B  C"
-    assert getIdentifier(firstLine) == [
+    assert getLeg(firstLine) == [
         {
             "char": "A",
             "index": 0,
