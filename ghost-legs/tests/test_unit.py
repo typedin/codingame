@@ -1,8 +1,8 @@
-from src.solution import mustGoRight
-from src.solution import mustGoLeft
-from src.solution import goRight
-from src.solution import goLeft
 from src.solution import getLegs
+from src.solution import goLeft
+from src.solution import goRight
+from src.solution import mustGoLeft
+from src.solution import mustGoRight
 
 
 def test_must_go_right():
