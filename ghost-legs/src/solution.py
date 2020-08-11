@@ -59,17 +59,17 @@ def solution(readings):
     lines = getLines(readings)
 
     result = []
-    for identifier in getLeg(lines[0]):
+    for leg in getLeg(lines[0]):
         for i in range(len(lines)):
-            if mustGoLeft(lines[i], identifier["index"]):
-                identifier["index"] = goLeft(lines[i], identifier["index"])
+            if mustGoLeft(lines[i], leg["index"]):
+                leg["index"] = goLeft(lines[i], leg["index"])
                 continue
-            if mustGoRight(lines[i], identifier["index"]):
-                identifier["index"] = goRight(lines[i], identifier["index"])
+            if mustGoRight(lines[i], leg["index"]):
+                leg["index"] = goRight(lines[i], leg["index"])
                 continue
         result.append("{}{}".format(
-                    identifier["char"],
-                    lines[i][identifier["index"]]
+                    leg["char"],
+                    lines[i][leg["index"]]
                 )
             )
 
