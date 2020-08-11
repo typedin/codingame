@@ -71,7 +71,8 @@ def solution(readings):
                 identifier["stop"] = goRight(lines[i], identifier["stop"])
                 continue
         result.append("{}{}".format(
-            identifier["char"], lines[i][identifier["stop"]])
+            identifier["char"],
+            lines[i][identifier["stop"]])
                       )
 
     return " ".join(result)
