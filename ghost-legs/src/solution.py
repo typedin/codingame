@@ -65,13 +65,13 @@ def solution(readings):
         identifier["stop"] = identifier["index"]
         currentIndex = identifier["stop"]
         for i in range(len(lines)):
-            if mustGoLeft(lines[i], currentIndex):
-                currentIndex = goLeft(lines[i], currentIndex)
+            if mustGoLeft(lines[i], identifier["stop"]):
+                identifier["stop"] = goLeft(lines[i], identifier["stop"])
                 continue
-            if mustGoRight(lines[i], currentIndex):
-                currentIndex = goRight(lines[i], currentIndex)
+            if mustGoRight(lines[i], identifier["stop"]):
+                identifier["stop"] = goRight(lines[i], identifier["stop"])
                 continue
-        result.append("{}{}".format(identifier["char"], lines[i][currentIndex]))
+        result.append("{}{}".format(identifier["char"], lines[i][identifier["stop"]]))
 
     return " ".join(result)
 
