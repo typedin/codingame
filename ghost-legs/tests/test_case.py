@@ -16,3 +16,6 @@ def test_C():
 
 def test_D():
     assert solution(readings4) == "A1 B3 C0 D5 E2 F7 G4 H9 I6 J8"
+
+def test_E():
+    assert solution(readings4) == "A1 B3 C0 D5 E2 F7 G4 H9 I6 J8"
