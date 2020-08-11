@@ -63,7 +63,7 @@ def solution(readings):
     result = []
     for identifier in getIdentifier(lines[0]):
         identifier["stop"] = identifier["index"]
-        currentIndex = identifier["index"]
+        currentIndex = identifier["stop"]
         for i in range(len(lines)):
             if mustGoLeft(lines[i], currentIndex):
                 currentIndex = goLeft(lines[i], currentIndex)
