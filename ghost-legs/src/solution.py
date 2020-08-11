@@ -56,8 +56,6 @@ def getLegs(firstLine):
 
 
 def solution(readings):
-    lines = getLines(readings)
-
     result = []
     for leg in getLegs(getLines(readings)[0]):
         for line in getLines(readings):
