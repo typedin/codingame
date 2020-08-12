@@ -16,7 +16,7 @@ class StringConverter:
 class StringToDecimal(StringConverter):
 
     def parse(self):
-        return float(Decimal(self.string.replace(',', '.')))
+        return float(self.string.replace(',', '.'))
 
 
 class User():
@@ -59,8 +59,6 @@ class Defibrilator():
 
 
 class Algorithm:
-    _EARTH_RADIUS = 6371
-
     def __init__(self, aUser, defibrilators):
         if not isinstance(aUser, User):
             raise ValueError("A valid user is required")
@@ -77,14 +75,10 @@ class Algorithm:
 
     def _distanceBetweenUserAndDefibrilator(self, defibrilator):
         return math.sqrt(
-            pow(self._computeX(defibrilator), 2) + pow(self._computeY(defibrilator), 2)
-        ) * self._EARTH_RADIUS
-
-    def _computeX(self, defibrilator):
-        return (self._user.lon - defibrilator.lon()) * math.acos((defibrilator.lat() - self._user.lat)/2)
-
-    def _computeY(self, defibrilator):
-        return defibrilator.lat() - self._user.lat
+            ((defibrilator.lat() - self._user.lat)**2)
+            +
+            ((defibrilator.lon() - self._user.lon)**2)
+        )
 
 
 class Solution:
